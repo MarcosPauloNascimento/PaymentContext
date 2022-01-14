@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Flunt.Notifications;
+using System;
 
 namespace PaymentContext.Shared.Entities
 {
-    public class Entity
+    public abstract class Entity : Notifiable<Notification>
     {
         public Entity()
         {
