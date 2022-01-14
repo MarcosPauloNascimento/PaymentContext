@@ -3,9 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentContex.Domain", "PaymentContex.Domain", "{311F2AD0-178C-45FD-BE54-8524AB190325}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentContext.Test", "PaymentContext.Test", "{CA4C36CA-B77E-4C02-B1CC-F9FFE30F897D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentContext.Shared", "PaymentContext.Shared", "{871B2421-3266-4DF3-A69B-9B59EBA8856B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Test", "PaymentContext.Test\PaymentContext.Test.csproj", "{833B4735-1C42-4022-B50E-2431E774E78A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Shared", "PaymentContext.Shared\PaymentContext.Shared.csproj", "{44739A4B-9E79-4021-B80F-DA140A51FE9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Domain", "PaymentContext.Domain\PaymentContext.Domain.csproj", "{C871B63E-C533-4D60-8829-C608FBC10720}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{833B4735-1C42-4022-B50E-2431E774E78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833B4735-1C42-4022-B50E-2431E774E78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833B4735-1C42-4022-B50E-2431E774E78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833B4735-1C42-4022-B50E-2431E774E78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44739A4B-9E79-4021-B80F-DA140A51FE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44739A4B-9E79-4021-B80F-DA140A51FE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44739A4B-9E79-4021-B80F-DA140A51FE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44739A4B-9E79-4021-B80F-DA140A51FE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C871B63E-C533-4D60-8829-C608FBC10720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C871B63E-C533-4D60-8829-C608FBC10720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C871B63E-C533-4D60-8829-C608FBC10720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C871B63E-C533-4D60-8829-C608FBC10720}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{833B4735-1C42-4022-B50E-2431E774E78A} = {CA4C36CA-B77E-4C02-B1CC-F9FFE30F897D}
+		{44739A4B-9E79-4021-B80F-DA140A51FE9D} = {871B2421-3266-4DF3-A69B-9B59EBA8856B}
+		{C871B63E-C533-4D60-8829-C608FBC10720} = {311F2AD0-178C-45FD-BE54-8524AB190325}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F07F5666-2C07-498D-A6FC-0F8034CD6D8D}
