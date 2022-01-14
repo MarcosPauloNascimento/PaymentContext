@@ -1,4 +1,5 @@
-﻿using PaymentContext.Domain.ValueObjects;
+﻿using Flunt.Validations;
+using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +25,21 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
-            //Se ja existir uma assinatura ativa, cancelar esta
+            var hasSubscriptionActive = false;
 
-            //Cancelar todas as assinaturas e adicionar esta como principal
-            foreach (var sub in Subscriptions)
-                sub.ChangeStateSubscription(false);
+            foreach(var sub in _subscriptions)
+            {
+                if (sub.Active)
+                    hasSubscriptionActive = true;
+            }
 
-            _subscriptions.Add(subscription);
+            //AddNotifications(new Contract<Student>()
+            //    .Requires()
+            //    .IsFalse(hasSubscriptionActive, "Student.Subscription", "Você ja tem um assinatura ativa")
+            //    );
+
+            if(hasSubscriptionActive)
+                AddNotification("Student.Subscription", "Você ja tem um assinatura ativa");
         }
     }
 }
