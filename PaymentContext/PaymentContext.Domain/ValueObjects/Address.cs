@@ -3,9 +3,9 @@ using PaymentContext.Shared.ValueObject;
 
 namespace PaymentContext.Domain.ValueObjects
 {
-    public abstract class Address : ValueObject
+    public class Address : ValueObject
     {
-        protected Address(string street, string number, string neighborhood, string city, string country, string zipCode)
+        public Address(string street, string number, string neighborhood, string city, string country, string zipCode)
         {
             Street = street;
             Number = number;
